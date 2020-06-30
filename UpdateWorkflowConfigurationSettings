@@ -1,0 +1,2 @@
+$webapp = Get-SPWebApplication -identity https://sharepoint.hrsa.gov
+$webapp.UpdateWorkflowConfigurationSettings()

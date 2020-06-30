@@ -1,0 +1,1 @@
+SELECT TOP [Id],[ClassId],[ParentId],[Name],[Status],[Version],cast([Properties] as XML) FROM [SharePoint_Config].[dbo].[Objects] (nolock) where Id = ‘61a02988-3b75-4a95-bfca-f041c43e278a’ 

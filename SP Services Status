@@ -1,0 +1,10 @@
+((Get-SPFarm).Services | where {$_.Name -match "SPtraceV4"}).instances | Format-Table -wrap -AutoSize
+ ((Get-SPFarm).Services | where {$_.Name -match "SPtimerV4" -or $_.Name -match "SPtraceV4" -or $_.Name -match "SPAdminV4" -or $_.Name -match "c2wts"}).instances | Format-Table -wrap -AutoSize
+((Get-SPFarm).Services | where {$_.Name -match "SPAdminV4"}).instances | Format-Table -wrap -AutoSize
+((Get-SPFarm).Services | where {$_.Name -match "c2wts"}).instances | Format-Table -wrap -AutoSize
+
+ ((Get-SPFarm).Services | where {$_.Name -match "SPtimerV4" -or $_.Name -match "SPtraceV4" -or $_.Name -match "SPAdminV4" -or $_.Name -match "c2wts"-or $_.Name -match "SPUserCodeV4"}).instances | Select-Object -Property TypeName,Server,Status,ID | Format-Table -AutoSize
+
+((Get-SPFarm).Services | where {$_.Name -match "SPSearchHostController"}).instances | Format-Table -wrap –AutoSize
+
+((Get-SPFarm).Services | where {$_.Name -match "OSearch16"}).instances | Format-Table -wrap -AutoSize
